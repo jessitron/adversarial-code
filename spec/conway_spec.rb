@@ -27,6 +27,14 @@ RSpec.describe "the game of life (don't talk to me about life)" do
       board = Board.new(3,3)
       expect( board.cells.length ).to eq( 9 )
     end
+
+    it "is full of death to begin with" do
+      Board.new(3,3).cells.each do |c|
+        expect(c).to be_dead
+      end
+    end
   end
+
+
 
 end
